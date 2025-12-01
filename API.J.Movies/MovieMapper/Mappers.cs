@@ -1,7 +1,8 @@
 ﻿using API.J.Movies.DAL.Dtos.Category;
 using API.J.Movies.DAL.Models;
+using API.J.Movies.DAL.Models.Dtos;
 using AutoMapper;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime;
 
 namespace API.J.Movies.MoviesMapper
 {
@@ -11,6 +12,10 @@ namespace API.J.Movies.MoviesMapper
         {
             CreateMap<Category, CategoryDto>().ReverseMap();
             CreateMap<Category, CategoryCreateUpdateDto>().ReverseMap();
+
+            CreateMap<Movie, MovieDto>().ReverseMap();
+            CreateMap<Movie, MovieCreateUpdateDto>().ReverseMap();
         }
+
     }
 }
